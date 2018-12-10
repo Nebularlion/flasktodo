@@ -6,11 +6,13 @@ from flask import Flask
 def create_app(test_config = None):
 
     # creates the FLask instance
-    app = Flask(__name__, instance_relative_config=True)
+    app = Flask(__name__, instance_relative_config = True)
     app.config.from_mapping(
         SECRET_KEY = 'dev',
         DATABASE = os.path.join(app.instance_path, 'flasktodo.sqlite'),
     )
+
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
 
     if test_config is None:
         # loads the instance config
@@ -34,5 +36,6 @@ def create_app(test_config = None):
     app.register_blueprint(todolist.bp)
 
     app.add_url_rule('/', endpoint='index')
-
+    
     return app
+
