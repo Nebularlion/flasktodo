@@ -1,1 +1,1 @@
-web: gunicorn flasktodo:flasktodo
+web: gunicorn flasktodo:todolist
