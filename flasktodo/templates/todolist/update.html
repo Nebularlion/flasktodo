@@ -7,11 +7,11 @@
 {% block content %}
   <form method="post">
     <label for="tododescription">Description</label>
-    <textarea name="text" id="text">{{ request.form['tododescription'] or todo['tododescription'] }}</textarea>
-    <input type="submit" value="Save">
+    <textarea class="form-control"name="text" id="text">{{ request.form['tododescription'] or todo['tododescription'] }}</textarea>
+    <input class="btn btn-success" type="submit" value="Save">
   </form>
   <hr>
   <form action="{{ url_for('todolist.delete_todo', id = todo['id']) }}" method="post">
-    <input class = "danger" type = "submit" value = "Delete" onclick = "return confirm('Are you sure?');">
+    <input class = "btn btn-danger" type = "submit" value = "Delete" onclick = "return confirm('Are you sure?');">
   </form>
 {% endblock %}
