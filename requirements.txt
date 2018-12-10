@@ -25,3 +25,4 @@ six==1.11.0
 SQLAlchemy==1.2.14
 virtualenv==15.1.0
 Werkzeug==0.14.1
+gunicorn
