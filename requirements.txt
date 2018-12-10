@@ -17,7 +17,6 @@ MarkupSafe==1.1.0
 monotonic==1.0
 psycopg2==2.7.6.1
 pycrypto==2.6.1
-pygobject
 python-xlib==0.20
 pyxdg==0.25
 SecretStorage==2.3.1
