@@ -1,1 +1,1 @@
-web: gunicorn flasktodo:todolist.py
+web: flask db upgrade; flask translate compile; gunicorn flasktodo:app
