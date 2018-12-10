@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}New Todo{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form action="{{ url_for('todolist.create_todo') }}" method="post">
+    <label for="todotitle">Title</label>
+    <input name="todotitle" for="todotitle" id="todotitle" required/>
+    <label for="tododescription">Description</label>
+    <textarea name="tododescription" id="tododescription"></textarea>
+    <input type="submit" value="Save">
+  </form>
+{% endblock %}
